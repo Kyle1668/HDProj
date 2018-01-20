@@ -1,7 +1,7 @@
 #################
 ## Eclipse
 #################
-
+node_modules/
 *.pydevproject
 .project
 .metadata
@@ -27,7 +27,7 @@ local.properties
 
 # PDT-specific
 .buildpath
-/node_modules
+
 
 
 #################
