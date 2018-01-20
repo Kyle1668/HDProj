@@ -5,6 +5,6 @@
 
 //tech used nodejs
 
+require("wise-helper");
 
-
-print("Hack davis health app server has started");
+console.log("Hack davis health app server has started");
