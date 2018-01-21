@@ -25,6 +25,7 @@
   "dependencies": {
     "query-string": "^5.0.1",
     "request": "^2.83.0",
+    "rsvp": "^4.8.0",
     "twitter": "^1.7.1",
     "wise-helper": "^2.4.3"
   }
