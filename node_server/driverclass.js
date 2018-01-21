@@ -2,7 +2,7 @@ var RSVP = require('rsvp');
 
 var Foobar = require('./Sentement_Class.js');
 
-var test = new Foobar("kill roy was here!");
+var test = new Foobar(" roy was here!");
 test.get_sentiment();
 
 
