@@ -12,7 +12,8 @@ var request = require('request');
 var queryString = require('query-string');
 var express = require('express');
 var PORT = 3000;
-var app = express()
+var app = express();
+var pass = require("path");
 
 function getHashtag(hash){
     return hash.params.hashtag;
@@ -28,8 +29,9 @@ app.get('/twitter/:hashtag', function (req, res) {
 // app.get('/'function (req, res) {
 //     return
 // });
-app.use('/', express.static('public'));
-// app.use(express.static('public/'));
+app.use(express.static(__dirname + '/public'));
+// app.use(express.static(path.join(__dirname, 'public')));
+
 
 app.listen(PORT, function () {
     console.log(`Example app listening on port ${PORT}`);
