@@ -11,7 +11,7 @@ var request = require('request');
 // https://www.npmjs.com/package/query-string
 var queryString = require('query-string');
 var express = require('express');
-var PORT = 3000;
+var PORT = 8080;
 var app = express();
 var pass = require("path");
 
@@ -34,6 +34,6 @@ app.use(express.static(__dirname + '/public'));
 
 
 app.listen(PORT, function () {
-    console.log(`Example app listening on port ${PORT}`);
+    console.log(`Running on address \nhttp://localhost:${PORT}/`);
 });
 console.log("Server Running");
