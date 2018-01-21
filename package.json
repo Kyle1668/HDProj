@@ -24,6 +24,7 @@
   "homepage": "https://github.com/Kyle1668/HDProj#readme",
   "dependencies": {
     "request": "^2.83.0",
+    "twitter": "^1.7.1",
     "wise-helper": "^2.4.3"
   }
 }
