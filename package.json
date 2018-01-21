@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/Kyle1668/HDProj#readme",
   "dependencies": {
+    "express": "^4.16.2",
     "promise": "^8.0.1",
     "query-string": "^5.0.1",
     "request": "^2.83.0",

@@ -10,29 +10,28 @@ require("wise-helper");
 var request = require('request');
 // https://www.npmjs.com/package/query-string
 var queryString = require('query-string');
+var express = require('express');
+var PORT = 3000;
+var app = express()
 
-var data = {};
+function getHashtag(hash){
+    return hash.params.hashtag;
+}
 
-data.input =  "The Last Jedi was the best Star Wars movie ever!";
-
-console.log("Hack davis health app server has started");
-
-
-
-
-
-var stringified = queryString.stringify(data);
-var API_URL = `http://lisent.herokuapp.com/get?${stringified}`;
-
-console.log(stringified);
-console.log(API_URL);
-
-request(API_URL, function (error, response, body) {
-//todo add error handeling
-	var json_returned = JSON.parse(body);
-	console.log("Sentament anallasis of setense");
-	console.log(`Positive :${json_returned.ppos}%`);
-	console.log(`Negative :${json_returned.pneg}%`);
-	// console.log(json_returned.pneg);	
-  // console.log(body); // Print the HTML for the Google homepage.
+// users/:userId/books/:bookId
+app.get('/twitter/:hashtag', function (req, res) {
+    res.send(req.params.hashtag)
+    console.log(getHashtag(req));
 });
+
+
+// app.get('/'function (req, res) {
+//     return
+// });
+app.use('/', express.static('public'));
+// app.use(express.static('public/'));
+
+app.listen(PORT, function () {
+    console.log(`Example app listening on port ${PORT}`);
+});
+console.log("Server Running");
